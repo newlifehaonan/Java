@@ -8,17 +8,17 @@
   * Loops
     * while loop
     ```java
-  while(!In.isEmpty()){
+    while(!In.isEmpty()){
       Out.println(variable);
-  }
+    }
     ```
     * for each loop
     ```java
-  for(int i=0;i < T; i++){}；
+    for(int i=0;i < T; i++){}；
     ```
     * stander for loop
     ```java
-  for (int i : x){};
+    for (int i : x){};
     ```
 
   * Abstract datatype
@@ -49,7 +49,7 @@
   }
   ```
 
-  **each node has its own memory id which can be referenced by `next` **
+  ** each node has its own memory id which can be referenced by `next` **
 
   ```java
   Node first = new Node();
@@ -144,7 +144,7 @@
    }
    ```
    * application of stack queue and bag
-    * CarWashSimulation
-    * postfix arithmatic
-    * double stack algrithm
-    * Listfilebylevel
+     * CarWashSimulation
+     * postfix arithmatic
+     * double stack algrithm
+     * Listfilebylevel
