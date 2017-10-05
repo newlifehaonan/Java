@@ -1,12 +1,10 @@
-**Week3note**
-  * Abstract datatype    
-
+* Abstract datatype    
   Build a object which is an entity to hold data value.   
   A class of a datatype includes:    
-    * **private variable/class**      
-    * **a constructor (should has same name as class name)**    
-    * **several instance methods**      
-    * **inherited methods**
+  * **private variable/class**      
+  * **a constructor (should has same name as class name)**    
+  * **several instance methods**      
+  * **inherited methods**
       * toString( ) :string representation  
       * equals(object another): is this object equal to that
       * get class( )
