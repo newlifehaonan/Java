@@ -32,11 +32,11 @@
       return "this is the format of return value " + name + count;
     }
   }
-```
+  ```
 
 * Applying ADT
 
-  By use reference datatype client do not need to know what's implemented in the API, they can simply use the object to hold the value and compute operations on them.     
+  By use reference datatype client do not need to know what's implemented in the API, they can simply use the object to hold the value and   compute operations on them.     
   **object used as a variable**    
     `Counter head = new Counter("head")`
     `head.accumulator()`    
@@ -50,6 +50,7 @@
   Example of using object includes:
     * **Date**      
     API:      
+    
     ```java
     public class date{
           public class month(){};
@@ -63,6 +64,7 @@
     }
     ```
     Implemented:  
+    
     ```java    
     Public class date{
       private int[] day = { 0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
