@@ -36,9 +36,9 @@
     * First in first out = FIFO
 
 * week4 notes
-  * linked lists
-  ** A linked list is a recursive data structure that is either empty(null) or a
-   reference to a `node` having a generic item and a reference to a linked list. **
+  * linked lists     
+  **A linked list is a recursive data structure that is either empty(null) or a
+   reference to a `node` having a generic item and a reference to a linked list.**
   `node` = `item` + `next node`
 
   ```java
@@ -49,7 +49,7 @@
   }
   ```
 
-  ** each node has its own memory id which can be referenced by `next` **
+  **each node has its own memory id which can be referenced by `next`**
 
   ```java
   Node first = new Node();
