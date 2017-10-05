@@ -28,4 +28,9 @@
   * Optimization of Stack
   * Client, API, implement.    
 **4. Week4**
-  *
+  * API for BAG, STACK & QUEUE
+  * Linked list
+  * implement for Stack and queue
+    *  push() pop()
+    *  enqueue() dequeue()
+  * application using collection
