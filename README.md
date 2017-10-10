@@ -49,7 +49,7 @@
   * StdIn
   * StdOut
   * In
-  * Out
+  * Out     
   * File 
 * algorithms complexity analysis
   * linear search : n
