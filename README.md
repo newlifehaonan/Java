@@ -3,12 +3,13 @@
 
 **1. Week1**  
   * primitive data type
-  * StdOut & StdIn package
-    * StdIn.readALLInts()
-    * StdIn.fromFile()
-    * StdIn.readInt()
-    * StdOut.printInt()
   * StdAudio & StdDraw
+  * common using class
+    * StdIn
+    * StdOut
+    * In
+    * Out     
+    * File 
   * recursion & iterative     
 **2. Week2**
   * Array : declare type and fixed array length
@@ -45,12 +46,6 @@
 * Binary Search
 * example of recursion
 * Array list VS Linked list
-* common using class
-  * StdIn
-  * StdOut
-  * In
-  * Out     
-  * File 
 * algorithms complexity analysis
   * linear search : n
   * Binary search : log(n)
