@@ -50,4 +50,7 @@
   * StdOut
   * In
   * Out
-  * File 
+  * File 
+* algorithms complexity analysis
+  * linear search : n
+  * Binary search : log(n)
