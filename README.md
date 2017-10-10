@@ -4,8 +4,9 @@
 **1. Week1**  
   * primitive data type
   * StdAudio & StdDraw
-  * common using class
-    * StdIn
+  * common using class      
+    
+    * StdIn
     * StdOut
     * In
     * Out     
