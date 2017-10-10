@@ -36,19 +36,18 @@
   * application using collection
  
  **5. Week5**  
- 
-    * review implementing reference datatype     
-      *  String format
-      *  Note of tone
-      *  digitalize tone
-    * Dept First search
-    * breadth First search
-    * Binary Search
-    * example of recursion
-    * Array list VS Linked list
-    * common using class
-      * StdIn
-      * StdOut
-      * In
-      * Out
-      * File 
+* review implementing reference datatype     
+  * String format
+  * Note of tone
+  * digitalize tone
+* Dept First search
+* breadth First search
+* Binary Search
+* example of recursion
+* Array list VS Linked list
+* common using class
+  * StdIn
+  * StdOut
+  * In
+  * Out
+  * File 
