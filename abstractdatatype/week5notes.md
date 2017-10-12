@@ -231,8 +231,8 @@
           return n*factorialR(n-1);
       }
       ```
-    * Filesearch in Depth
-      **iteration vision is in privious part**
+    * Filesearch in Depth         
+      **iteration vision is in privious part**       
       **Recursion vision**
         
       ```java
@@ -246,8 +246,8 @@
         };  
       };
       ```
-    * Binary Search
-      **iteration vision is in privious part**
+    * Binary Search      
+      **iteration vision is in privious part**        
       **Recursion vision**
       ```java
       public static int BSR(int[] a, int key, int lo, int hi){
