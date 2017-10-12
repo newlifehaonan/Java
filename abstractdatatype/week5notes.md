@@ -234,23 +234,32 @@
     * Filesearch in Depth
       **iteration vision is in privious part**
       **Recursion vision**
+        
       ```java
-      public static void DepthR(File file){
-
-      }
-      ```
-    * Binary distribution
-      **Iteration vision**
-      ```java
-      ```
-      **Recursion vision**
-      ```java
+      public static void FSDR(File file){
+        StdOut.print(file);
+        if(file.isDirectory()){
+          File[ ] Files = file.listFiles();
+          for (File file : Files){
+            FSDR(file);
+          };
+        };  
+      };
       ```
     * Binary Search
       **iteration vision is in privious part**
       **Recursion vision**
       ```java
-
+      public static int BSR(int[] a, int key, int lo, int hi){
+        if (lo > hi) return -1;
+        if (lo < hi){
+          mid = (lo+hi)/2;
+          if (key == a[mid]) return mid;
+          else if (key < a[mid]) return BSR(a, key, lo, mid -1)
+          else
+          return BSR(a, key, mid + 1, hi)
+        }
+      }
       ```
   * How comes the complexity of Binary Search equals to log(n)?
   *
