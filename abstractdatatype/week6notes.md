@@ -48,6 +48,7 @@
     }
     ```
   * `T(2N)/T(N)`
+  
 $$T(N)=a*N^b*lg(N)$$
 $$\frac{T(2N)}{T(N)}=2^b(1+lg(2)/lg(N))$$
 
@@ -73,7 +74,7 @@ $$\frac{T(2N)}{T(N)}=2^b(1+lg(2)/lg(N))$$
   ```
   * how many times does it takes to run this algorithm in a regular computer
 
-$$ T(N)=\sum_{i=0}^{n-1}\sum_{j=i}^{n-1} 1 =\sum_{i=0}^{n-1} (n-1-i+1)$$
+$$T(N)=\sum_{i=0}^{n-1}\sum_{j=i}^{n-1} 1 =\sum_{i=0}^{n-1} (n-1-i+1)$$
 
 $$=\sum_{i=0}^{n-1}(n-i) =\sum_{i=0}^{n-1}n -\sum_{i=0}^{n-1}i=\frac{1}{2}n^2 +\frac{1}{2}n$$      
 
@@ -101,7 +102,7 @@ $$Lg(T(N)) = 3*lg(1/2N)$$
   ```
   * how many comparations need bubble sort takes
 
-$$ T(N)=\sum_{i=0}^{n-1}\sum_{j=0}^{n-i-2}1 =\frac{1}{2}N^2-\frac{1}{2}N$$
+$$T(N)=\sum_{i=0}^{n-1}\sum_{j=0}^{n-i-2}1 =\frac{1}{2}N^2-\frac{1}{2}N$$
 $$Lg(T(N)) = lg(1/2N)$$
 
 **<center>compare to selection sort, bubble sort make the slop decrease </center>**
