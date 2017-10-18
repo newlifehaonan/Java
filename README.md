@@ -50,6 +50,7 @@
 * algorithms complexity analysis
   * linear search : n
   * Binary search : log(n)
+  
  **6. Week6** 
 * insertion sort
 * bubble sort
