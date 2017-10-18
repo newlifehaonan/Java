@@ -48,8 +48,8 @@
     }
     ```
   * `T(2N)/T(N)`
-<img src="http://chart.googleapis.com/chart?cht=tx&chl=$$T(N)=a*N^b*lg(N)$$
-$$\frac{T(2N)}{T(N)}=2^b(1+lg(2)/lg(N))$$" style="border:none;">
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= T(N)=a*N^b*lg(N)
+\frac{T(2N)}{T(N)}=2^b(1+lg(2)/lg(N))" style="border:none;">
 $$T(N)=a*N^b*lg(N)$$
 $$\frac{T(2N)}{T(N)}=2^b(1+lg(2)/lg(N))$$
 
