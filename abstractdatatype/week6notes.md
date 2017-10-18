@@ -47,10 +47,11 @@
       }
     }
     ```
-  * `T(2N)/T(N)`      
-$$ T(N)=a*N^b*lg(N) $$
+  * `T(2N)/T(N)`     
+  
+  $$ T(N)=a*N^b*lg(N) $$
 
-$$ \frac{T(2N)}{T(N)}=2^b(1+lg(2)/lg(N)) $$
+  $$ \frac{T(2N)}{T(N)}=2^b(1+lg(2)/lg(N)) $$
 
 * selection sort
   ```java
