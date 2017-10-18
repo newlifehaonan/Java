@@ -50,3 +50,14 @@
 * algorithms complexity analysis
   * linear search : n
   * Binary search : log(n)
+ **6. Week6** 
+* insertion sort
+* bubble sort
+* merge sort
+  * divide
+  * conquer
+* 2 & 3 Sum
+* Complexity patten
+* mathematical validation
+* Insert & delete node from linked list in between
+* double linked list
