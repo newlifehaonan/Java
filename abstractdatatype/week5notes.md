@@ -177,8 +177,8 @@
         }
       }
       //if found no matched value, return -1 means no index in the array//
-      return -1
-    }
+      return -1;
+      }
     ```
   * example of recursion;
 
@@ -222,7 +222,7 @@
       }
       ```
 
-      **Recursion vision**
+      ** Recursion vision **
       ```java
       //base is 1; n-1 convergent to 0//
       public static int factorialR(int n){
@@ -234,7 +234,7 @@
     * Filesearch in Depth         
       **iteration vision is in privious part**       
       **Recursion vision**
-        
+
       ```java
       public static void FSDR(File file){
         StdOut.print(file);
@@ -261,5 +261,39 @@
         }
       }
       ```
-  * How comes the complexity of Binary Search equals to log(n)?
-  *
+  * Runtime Analysis of Programs
+    * science method
+      * Observe
+      * Hypothesize: Falsifiable & Reproducible
+      * Predict events using Hypothesize
+      * Verify prediction using more observation
+      * Validate by repeating untill the Hypothesize matched observation
+    * Complexity of iterated Binary search  
+      ```java
+      public int binarysearch(int[] a, int key){
+        int lo =0;
+        int hi =a.length-1
+        while(lo < hi){
+          int mid = (lo+hi)/2;
+          if(a[mid] == key) return mid;
+          if(a[mid] < key){
+            lo = mid + 1；
+          }
+          if(a[mid] > key){
+            hi =mid -1;
+          }
+        }
+        return -1;
+        }
+      ```
+      * observation :     
+      As blow
+      * Model      
+$$T(N) = lg(N) $$       
+
+N     |2^k| T(N)
+:---: |:--:|:---:
+8     |2^3|3
+16    |2^4|4
+32    |2^5|5
+...   |...|...
