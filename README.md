@@ -61,14 +61,14 @@
 * Complexity patten
 * mathematical validation
 * Insert & delete node from linked list in between
-* double linked list
+* double linked list     
  **7. Week7**
 * implement of orderedlinkedlist
 * runtime analysis
 * `varargs` statment
 * union find
- * fast union, slow find
- * fast find, slow union
- * weighted union
- * pass compression
+  * fast union, slow find
+  * fast find, slow union
+  * weighted union
+  * pass compression
  
