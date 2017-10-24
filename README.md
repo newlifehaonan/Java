@@ -61,7 +61,8 @@
 * Complexity patten
 * mathematical validation
 * Insert & delete node from linked list in between
-* double linked list     
+* double linked list  
+
  **7. Week7**
 * implement of orderedlinkedlist
 * runtime analysis
