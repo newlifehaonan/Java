@@ -1,4 +1,4 @@
-# Java
+# Data structure
 *Learning data structure by java*     
 
 **1. Week1**  
@@ -70,6 +70,13 @@
 * union find
   * fast union, slow find
   * fast find, slow union
-  * weighted union
-  * pass compression
- 
+  
+ **8. Week8**
+* weighted union
+* pass compression
+* sortmethod
+ * elementory sort
+ * merge sort
+ * quick sort
+* lambda function in function
+ * example of Using compareTo method
