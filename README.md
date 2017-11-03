@@ -75,8 +75,8 @@
 * weighted union
 * pass compression
 * sortmethod
- * elementory sort
- * merge sort
- * quick sort
+  * elementory sort
+  * merge sort
+  * quick sort
 * lambda function in function
- * example of Using compareTo method
+  * example of Using compareTo method
