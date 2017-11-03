@@ -15,7 +15,8 @@ Data structure I
     * In
     * Out     
     * File 
-  * recursion & iterative     
+  * recursion & iterative  
+  
 **2. Week2**
   * Array : declare type and fixed array length
   * Compute Descriptive statistic
@@ -26,6 +27,7 @@ Data structure I
     * Std
     * P-value
   * Array storage principle     
+  
 **3. Week3**     
   * abstract datatype (referenced datatype)
   * Stack * Queue
@@ -41,7 +43,7 @@ Data structure I
     *  enqueue() dequeue()
   * application using collection
  
- **5. Week5**  
+**5. Week5**  
 * review implementing reference datatype     
   * String format
   * Note of tone
@@ -55,7 +57,7 @@ Data structure I
   * linear search : n
   * Binary search : log(n)
   
- **6. Week6** 
+**6. Week6** 
 * insertion sort
 * bubble sort
 * merge sort
@@ -67,7 +69,7 @@ Data structure I
 * Insert & delete node from linked list in between
 * double linked list  
 
- **7. Week7**
+**7. Week7**
 * implement of orderedlinkedlist
 * runtime analysis
 * `varargs` statment
@@ -75,7 +77,7 @@ Data structure I
   * fast union, slow find
   * fast find, slow union
   
- **8. Week8**
+**8. Week8**
 * weighted union
 * pass compression
 * sortmethod
