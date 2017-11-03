@@ -1,9 +1,10 @@
 # Data structure
-======
+
+======     
 DePaul University      
 CDM Computer Science     
 Data structure I     
-======
+======     
 *Learning data structure by java*     
 
 **1. Week1**  
