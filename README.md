@@ -1,6 +1,4 @@
-# Data structure
-
-======     
+# Data structure   
 DePaul University      
 CDM Computer Science     
 Data structure I     
