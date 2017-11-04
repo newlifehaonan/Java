@@ -82,7 +82,5 @@ Data structure I
 * pass compression
 * sortmethod
   * elementory sort
-  * merge sort
-  * quick sort
 * lambda function in function
   * example of Using compareTo method
