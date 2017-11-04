@@ -58,7 +58,7 @@ Data structure I
   * Binary search : log(n)
   
 **6. Week6** 
-* insertion sort
+* Selection sort
 * bubble sort
 * merge sort
   * divide
