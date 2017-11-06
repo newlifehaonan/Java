@@ -67,7 +67,7 @@
 see week6nodes for detail.
 $$ \frac{1}{2}n^2 -\frac{1}{2}n $$
 
-###2. bubble sort
+### 2. bubble sort
 * definition
   move the highest value to the right in each array access.
 * implement code
@@ -89,7 +89,7 @@ $$ \frac{1}{2}n^2 -\frac{1}{2}n $$
   }
   ```
 
-###3. Insertion sort
+### 3. Insertion sort
 * definition
   * consider one value at each time, put them in proper location among those already considered.
   * For insertion we need to create space by moving larger position to the right one at the time.
