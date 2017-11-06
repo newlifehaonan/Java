@@ -1,4 +1,4 @@
-#Sort Algorithm
+# Sort Algorithm
 <hr />
 
 * Rules     
@@ -167,11 +167,11 @@ what is partially sorted array ?
 
 `By conduct a experiment that applying two Algorithm to sort T N-dim array to see the relative speed of the two Algorithm, we find Selection sort is quicker than InsertionSort.`
 
-#comparator and lambda function
+# comparator and lambda function
 <hr />
 `The following comparer are based on the Object Restaurant`
 
-# Restaurant Object
+## Restaurant Object
 
 ```java
 Public class Restaurant{
@@ -209,7 +209,7 @@ Public class Restaurant{
 }
 ```
 
-# Comparable interface
+## Comparable interface
 * Interface
   ```java
   public interface Comparable<T> {
@@ -232,7 +232,7 @@ Public class Restaurant{
 
   }
   ```
-# comparator interface
+## comparator interface
 * Interface
   ```java
   public interface Comparator<T> {
