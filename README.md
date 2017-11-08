@@ -84,3 +84,11 @@ Data structure I
   * elementory sort
 * lambda function in function
   * example of Using compareTo method
+  
+**8. Week9**
+* Java memory structure.
+* priority queue
+  * construction
+  * heap sort
+  * application
+  
