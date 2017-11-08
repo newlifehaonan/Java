@@ -197,11 +197,11 @@ what is partially sorted array ?
   }
   ```
   
-#comparator and lambda function
+# comparator and lambda function
 <hr />
 `The following comparer are based on the Object Restaurant`
 
-# Restaurant Object
+## Restaurant Object
 
 ```java
 Public class Restaurant{
@@ -239,7 +239,7 @@ Public class Restaurant{
 }
 ```
 
-# Comparable interface
+## Comparable interface
 * Interface
   ```java
   public interface Comparable<T> {
@@ -262,7 +262,7 @@ Public class Restaurant{
 
   }
   ```
-# comparator interface
+## comparator interface
 * Interface
   ```java
   public interface Comparator<T> {
