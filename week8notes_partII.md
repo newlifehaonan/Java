@@ -1,4 +1,4 @@
-# Sort Algorithm
+#Sort Algorithm
 <hr />
 
 * Rules     
@@ -67,7 +67,7 @@
 see week6nodes for detail.
 $$ \frac{1}{2}n^2 -\frac{1}{2}n $$
 
-### 2. bubble sort
+###2. bubble sort
 * definition
   move the highest value to the right in each array access.
 * implement code
@@ -86,10 +86,12 @@ $$ \frac{1}{2}n^2 -\frac{1}{2}n $$
       }
       return a;
     }
+
+    .....
   }
   ```
 
-### 3. Insertion sort
+###3. Insertion sort
 * definition
   * consider one value at each time, put them in proper location among those already considered.
   * For insertion we need to create space by moving larger position to the right one at the time.
@@ -104,7 +106,7 @@ $$ \frac{1}{2}n^2 -\frac{1}{2}n $$
       }
     }
   }
-
+  .....
   }
   ```
 * version 2:Compare while shift position
@@ -117,13 +119,13 @@ $$ \frac{1}{2}n^2 -\frac{1}{2}n $$
           for ( int j=i-1; j>=0 && less(temp, a[j]); j--){
             //shift position//
             a[j+1] = a[j];
+          }
           a[j+1] = temp;
           }
         }
       }
     }
-  }
-
+    .....
   ```
 
 * Runtime
@@ -163,15 +165,43 @@ $$ \frac{1}{2}n^2 -\frac{1}{2}n $$
     ```
 
 what is partially sorted array ?          
-`A array with a few inversions in it`
+1. `A array with a few inversions in it`
+2. `number of exchange is equal to the number of inversions in the array`
+3. `number of compare is at least N-1, if there exit inversions, the number of compare equals to number of insertion plus N-1 `
 
 `By conduct a experiment that applying two Algorithm to sort T N-dim array to see the relative speed of the two Algorithm, we find Selection sort is quicker than InsertionSort.`
 
-# comparator and lambda function
+###4. shell sort
+* definition     
+  assume we have a descending ordered array, in naive insertion sort, we need N-1 exchange to move the smallest value to its right place since the Algorithm only allowed swap between adjacent entries. Shell sort allow items that far apart from its right place to swap directly by creating partially sorted array first and finally using insertion sort.
+
+* implement code
+  ```java
+  public class shellsort{
+    public T[] shellsort(T[] a){
+      int N=a.length;
+      int h = 1;
+      //defined the largest step size following the 3*k+1 sequence//
+      while(h<N) h=3*h+1;
+      //do the h-sorted array//
+      while(h >=1){
+        for(int i=h; i < N; i++){
+          for(int j =h; j>=h && less(a[j],a[j-h]); j-=h){
+            exchange(a,j,j-h);
+          }
+        }
+        //decrement the step size and redo the insertion sort until h hits 1//
+        h = h/3;
+      }
+    }
+  }
+  ```
+  
+#comparator and lambda function
 <hr />
 `The following comparer are based on the Object Restaurant`
 
-## Restaurant Object
+# Restaurant Object
 
 ```java
 Public class Restaurant{
@@ -209,7 +239,7 @@ Public class Restaurant{
 }
 ```
 
-## Comparable interface
+# Comparable interface
 * Interface
   ```java
   public interface Comparable<T> {
@@ -232,7 +262,7 @@ Public class Restaurant{
 
   }
   ```
-## comparator interface
+# comparator interface
 * Interface
   ```java
   public interface Comparator<T> {
