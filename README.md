@@ -82,10 +82,14 @@ Data structure I
 * pass compression
 * sortmethod
   * elementory sort
+  1. selection sort
+  2. bubble sort
+  3. insertion sort
+  4. shell sort
 * lambda function in function
   * example of Using compareTo method
   
-**8. Week9**
+**9. Week9**
 * Java memory structure.
 * priority queue
   * construction
