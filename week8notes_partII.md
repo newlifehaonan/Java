@@ -1,4 +1,4 @@
-#Sort Algorithm
+# Sort Algorithm
 <hr />
 
 * Rules     
@@ -67,7 +67,7 @@
 see week6nodes for detail.
 $$ \frac{1}{2}n^2 -\frac{1}{2}n $$
 
-###2. bubble sort
+### 2. bubble sort
 * definition
   move the highest value to the right in each array access.
 * implement code
@@ -91,7 +91,7 @@ $$ \frac{1}{2}n^2 -\frac{1}{2}n $$
   }
   ```
 
-###3. Insertion sort
+### 3. Insertion sort
 * definition
   * consider one value at each time, put them in proper location among those already considered.
   * For insertion we need to create space by moving larger position to the right one at the time.
@@ -171,7 +171,7 @@ what is partially sorted array ?
 
 `By conduct a experiment that applying two Algorithm to sort T N-dim array to see the relative speed of the two Algorithm, we find Selection sort is quicker than InsertionSort.`
 
-###4. shell sort
+### 4. shell sort
 * definition     
   assume we have a descending ordered array, in naive insertion sort, we need N-1 exchange to move the smallest value to its right place since the Algorithm only allowed swap between adjacent entries. Shell sort allow items that far apart from its right place to swap directly by creating partially sorted array first and finally using insertion sort.
 
