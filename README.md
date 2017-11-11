@@ -96,3 +96,9 @@ Data structure I
   * heap sort
   * application
   
+**10. Week10**
+* merger sort
+  * in-place
+  * bottom-up
+  * top-down
+* quick sort
