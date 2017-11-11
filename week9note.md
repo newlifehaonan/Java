@@ -253,17 +253,237 @@ Application interface includes:
     return max;
   }
   ```
-* index priority queue
+* index priority queue (another complex hash table)
 
   Q: what if each Key has its own information, how to store and retrieve the information while insert and delmax key ?
 
   A: Add unique key for client to refer, and create parallel array to store items.
+  * Things need to be change or add.
 
-  example:
+  1. qp store the index if Key
+
+  2. Key are store in another parallel list
+
+  3. `delmax` delete the index of the Key while you should delete the key from the key list.
+
+  4. `insert` insert the index of key while add the key into key list.
+
+  5. the index needs to be unique.
+
+  6. need to create a reference to know the currently position of a index.
+
+  7. compare method and exchange method need to be modified as well
+
+  * API
+
+  1. `IndexMaxPQ(int maxN)`:create a MaxPQ with maxN capacity.
+
+  2. `contain(int i)`: does the index of the key is unique.
+
+  3. `insert(int i, Key key)`: add a new node to pq with index i;
+
+  4. `delmax()`: detete the node with highest priority.
+
+  5. `maxKey(int i)`: return the key of highest priority node.
+
+  6. `indexMax()`: return the index associate with highest priority node.
+
+  7. `changeKey(int i Key key)`: change the key associate with index i to a new value.
+
+  8. `delete(int i)`: delete the key associate with index i.
+
+  * implement code
   ```java
+  public class IndexMaxPQ<Key extends Comparable<k>>{
+    private int capacity;
+    private int N =0;
+    private int[] a; //store the indexes of keys//
+    private int[] b; //store the position of key associate with index in heap//
+    private Key[] keys; //store the key information//
 
+    private boolean less(int i, int j){
+      return keys[a[i]].compareTo(keys[a[j]]);
+    }
+
+    private void exchange(int i, int j){
+      int temp = a[i]; a[i] = a[j]; a[j] = temp;
+      //why, because position is fixed, we need to change the reference of the index//
+      b[a[i]]=i;
+      b[a[j]]=j
+    }
+
+    private void swim(int v){
+      // when v =1, it already been the root, so terminate the loop//
+      while(v>1 && less(v/2, v)){
+        exchange(v/2,v);
+        v = v/2;
+      }
+    }
+
+    private void sink(int v){
+      //since the size of PQ so far is N, index can't be larger than N//
+      while(2*v < N){
+        int j =2*v;
+        //compare the two child node, swap v with the larger one//
+        if(j < N && less(j,j+1)) j++;
+
+        if(less(v,j)){
+          exchange(v,j);
+          v = j;
+        }
+      }
+    }
+
+    public IndexMaxPQ(int maxN){
+      if(maxN<=0) throw new IllegalArgumentException();
+      capacity = maxN;
+      int[] a = new int[maxN+1];
+      int[] b = new int[maxN+1];
+      Key[] keys = new Key[maxN+1];
+      for(int i=0; i<=maxN; i++){
+        //when the pq is empty, all the index's reference position is -1//
+        b[i] = -1;
+      }
+    }
+
+    public boolean isEmpty(){
+      return N==0;
+    }
+
+    public boolean contain(int i){
+      // why i >= maxN, because a[1] could be 0//
+      if (i < 0 || i >= maxN) throw new IndexOutOfBoundsException();
+      //if the b[i] != 1, the index must have some position in the heap//
+      return b[i] != -1;
+    }
+
+    public void insert(int i, Key key){
+      if (i < 0 || i >= maxN) throw new IndexOutOfBoundsException();
+      if(contain(i)) throw new IllegalArgumentException("index already in the priority queue");
+      N = N +1;
+      a[N] = i;
+      b[i] = N;
+      keys[i] = key;
+      swim(N);
+    }
+
+    public int delmax(){
+      if(N==0) throw new NoSuchElementException("Priority queue underflow");
+      int max = a[1];
+      exchange(1,N)
+      N = N - 1;
+      a[N] = null;
+      sink(1);
+      b[max] = -1;
+    }
+
+    public int maxindex(){
+      if (N == 0) throw new NoSuchElementException("Priority queue underflow");
+      return a[1];
+    }
+
+    public Key maxkey(){
+      if (N == 0) throw new NoSuchElementException("Priority queue underflow");
+      return keys[a[1]];
+    }
+
+    public K keyOf(int i) {
+      if (i < 0 || i >= maxN) throw new IndexOutOfBoundsException();
+      if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+      else return keys[i];
+    }
+
+    public void changekey(int i, Key key){
+      if (i < 0 || i >= maxN) throw new IndexOutOfBoundsException();
+      if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+      keys[i] = key;
+      swim(b[i]);
+      sink([b[i]]);
+    }
+
+    public void delete(int i){
+      if (i < 0 || i >= maxN) throw new IndexOutOfBoundsException();
+      if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+      N = N -1;
+      exchange(b[i], N)
+      swim(b[i]);
+      sink(b[i]);
+      keys[i] = null;
+      b[i] = -1;      
+    }
+  }
   ```
 ## heap sort
+* step
+  * given a N size array, using MaxPQ(key[] a) constructor to turn it into a N size heap.
+
+  * exchange(1,N), re-heap the array from (1,N-1) until the heap become empty.
+
+* implementation code
+  ```java
+  public class heapsort<Key extends comparable<Key>>{
+
+    public static boolean less(Key[] a, int i, int j){
+      return a[i].compareTo(a[j])<0;
+    }
+
+    public static void exchange(Key[] a, int v, int j){
+      int N = a.length;
+      Key temp = a[v];
+      a[j] = a[v];
+      a[v] = temp;
+    }
+
+    public static void sink(Key[] a, int v, int n){
+
+      //n is the capacity of the heap//
+      int N = a.length;
+
+      if (n<0 || n > N) throw new IndexOutOfBoundsException("heap overflow");
+
+      while(2*v < n){
+        int j = 2* v;
+
+        if(j<N && less(a,j,j+1)) j++;
+
+        if(less(v,j)){
+          exchange(a,v,j);
+          v=j;
+        }
+      }
+    }
+
+    public static void Heapsort(Key [] a){
+      int N = a.length;
+      Key[] heap = new Key[N+1];
+
+      for(int i; i < N; i++){
+        heap[0] = null;
+        heap[i+1]=a[i];
+      }
+
+      //re-arrange a into heap order//
+      for(int i = N/2; i >=1; i--){
+        sink(heap, i, N);
+      }
+
+      //exchange value in the heap//
+      while(N>1){
+        exchange(heap,1,N);
+        N--;
+        sink(heap,1,N);
+      }
+    }
+
+  }
+  ```
+* runtime analysis of heapsort
+  * runtime at value exchange step      
+  `2N*log(N)`
+  * runtime at heap construction
+
+$$\sum_{i=0}^{logN}2^{logN-i}* i = N-log[N]-2$$
+
 
 # particle application using PQ
 <hr />
