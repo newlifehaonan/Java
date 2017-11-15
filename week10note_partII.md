@@ -98,7 +98,7 @@ public static void sort(K[] a, int lo, int mid, int hi){
 
 **Quick sort involves three step: shuffle, partition and sort. The idea is find a pivot that every nodes before the pivot is less than it, every nodes after the pivot is larger than it. divided the array in the same way as merge sort and use the partition method on each subarray**
 
-##1. partition
+## 1. partition
 * set the a[0] as the pivot, find its correct position in the array.
 * set pointer i, which scan from right until it find the item that larger than the pivot.
 * set point j, which scan from left until it find the item that less than the pivot.
@@ -124,7 +124,7 @@ public class quicksort<K extends comparable<K>>{
 }
 ```
 
-##2. shuffle and sort.
+## 2. shuffle and sort.
 * shuffle the array to avoid the condition that no item are less or larger than pivot, in another word, a[0】 is the final correct position.
 * divided the array using recursion
 ```java
@@ -142,7 +142,7 @@ public static void sort(K[] a){
 }
 ```
 
-##3. optimization.
+## 3. optimization.
 * what if the array is short ?
 **implement insertion sort when the array size decreased to certain range since insertion sort is faster when the array is small**
   ```java
