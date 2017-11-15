@@ -97,8 +97,14 @@ Data structure I
   * application
   
 **10. Week10**
+* PQ application 
+  * collide stimulation
+  * kunskal's algorithm( intro ) 
 * merger sort
   * in-place
   * bottom-up
   * top-down
 * quick sort
+  * partition 
+  * sort divided and conquer
+  * optimization
