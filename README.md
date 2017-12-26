@@ -1,6 +1,5 @@
 # Data structure   
-DePaul University      
-CDM Computer Science     
+Computer Science     
 Data structure I     
 ======     
 *Learning data structure by java*     
