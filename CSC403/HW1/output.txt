@@ -1,0 +1,64 @@
+/*Author: Haonan(Harry) Chen
+* class: CSC 403
+*/
+
+1.Test size()
+a.test size on an empty ST
+sizeTest: Correct  String  Answer: 0
+b.test size on a non-empty ST
+sizeTest: Correct  String abcde Answer: 5
+
+2.Test secondMaxKey()
+a.test secondMaxKey on ST which size > 1
+secondMaxKey: Correct  String abcdefg Answer: f
+b.test secondMaxKey on ST which size =1
+secondMaxKey: Correct  String A Answer:null
+c.test secondMaxKey on an empty ST 1
+secondMaxKey: Correct  String  Answer:null
+
+3.Test rank()
+a.test rank on non-empty ST
+rank(c): Correct  String bcdef Answer: 1
+rank(a): Correct  String bcdef Answer: 0
+
+4.Test floor()
+a.test floor on ST with which target key included
+floor(y): Correct  String stuvwxy Answer: y
+b.test floor on ST with which target key NOT included
+floor(z): Correct  String stuvwxy Answer: y
+c.test floor on ST with which floor-key does not exist
+floor(a): Correct  String stuvwxy Answer:null
+
+5.Test inverse()
+a.test inverse on ST with no duplicate value
+Before Inversion
+g 7
+f 6
+e 5
+d 4
+c 3
+b 2
+a 1
+After Inversion
+1 a
+2 b
+3 c
+4 d
+5 e
+6 f
+7 g
+b.test inverse on ST with duplicate value
+Before Inversion
+g 5
+f 5
+e 5
+d 4
+c 3
+b 2
+a 1
+After Inversion
+1 a
+2 b
+3 c
+4 d
+5 e
